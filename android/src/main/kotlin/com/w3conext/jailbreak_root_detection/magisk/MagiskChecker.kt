@@ -6,6 +6,9 @@ object MagiskChecker {
 
     fun isInstalled(): Boolean {
         val magisk = File("/data/adb/magisk.img")
+        val magiskDb = File("/data/adb/magisk.db")
+        val magiskpolicy = File("/data/adb/magiskpolicy")
+
         if (magisk.exists()) {
             return true
         }
