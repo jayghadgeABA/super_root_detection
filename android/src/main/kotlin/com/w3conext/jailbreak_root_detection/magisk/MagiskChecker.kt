@@ -9,7 +9,7 @@ object MagiskChecker {
         val magiskDb = File("/data/adb/magisk.db")
         val magiskpolicy = File("/data/adb/magiskpolicy")
 
-        if (magisk.exists()) {
+        if (magisk.exists() || magiskDb.exists() || magiskpolicy.exists()) {
             return true
         }
         var suFile = File("/su/bin/su")
